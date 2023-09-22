@@ -1,5 +1,4 @@
 # flutter_calculator
 
 
-
-![Screenshot_1693734219](https://github.com/MehrabBozorgi/flutter_calculator/assets/78899995/541a0ef2-afd5-4f1e-a1a1-2d49a0dda942)
+![Untitled-1](https://github.com/MehrabBozorgi/flutter_calculator/assets/78899995/0e35ae0e-6af7-473c-ad8a-56979e6f9fa6)
