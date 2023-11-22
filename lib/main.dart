@@ -29,12 +29,12 @@ class BeginScreen extends StatefulWidget {
 }
 
 class _BeginScreenState extends State<BeginScreen> {
-  String inputNumer = '';
+  String inputNumber = '';
   String result = '';
 
   inputFunction(String text) {
     setState(() {
-      inputNumer = inputNumer + text;
+      inputNumber = inputNumber + text;
     });
   }
 
@@ -105,8 +105,8 @@ class _BeginScreenState extends State<BeginScreen> {
             IconButton(
               onPressed: () {
                 setState(() {
-                  if (inputNumer.isNotEmpty) {
-                    inputNumer = inputNumer.substring(0, inputNumer.length - 1);
+                  if (inputNumber.isNotEmpty) {
+                    inputNumber = inputNumber.substring(0, inputNumber.length - 1);
                   }
                 });
               },
@@ -130,7 +130,7 @@ class _BeginScreenState extends State<BeginScreen> {
           Padding(
             padding: const EdgeInsets.all(15),
             child: Text(
-              inputNumberText(inputNumer),
+              inputNumberText(inputNumber),
               style: TextStyle(fontSize: 32),
               textAlign: TextAlign.right,
             ),
@@ -167,7 +167,7 @@ class _BeginScreenState extends State<BeginScreen> {
             if (label1 == 'C') {
               setState(() {
                 result = '';
-                inputNumer = '';
+                inputNumber = '';
               });
             } else {
               inputFunction(label1);
@@ -224,7 +224,7 @@ class _BeginScreenState extends State<BeginScreen> {
           onPressed: () {
             if (label4 == '=') {
               Parser p = Parser();
-              Expression exp = p.parse(inputNumer);
+              Expression exp = p.parse(inputNumber);
 
               ContextModel equal = ContextModel();
 
@@ -251,10 +251,10 @@ class _BeginScreenState extends State<BeginScreen> {
 
   String inputNumberText(String text) {
 // inputNumer.isEmpty ? "0" : inputNumer
-    if (inputNumer.isEmpty) {
+    if (inputNumber.isEmpty) {
       return '0';
     }
-    return inputNumer;
+    return inputNumber;
   }
 
   bool isOperator(String text) {
